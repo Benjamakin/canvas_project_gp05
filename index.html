@@ -4,9 +4,156 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./link/favicon.ico">
+    <title>Paint Remake</title>
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      File
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      View
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Image
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Colors
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+     <div class="layout">
+        <!-- Tool Box -->
+          <div class="toolBox">
+
+            <button class="tool" id="BtnPolySelection">
+                <img src="./link/Polygonal selection tool_off.png">
+            </button>
+            
+            <button class="tool" id="BtnSqSelection">
+                <img src="./link/Square selection tool_off.png">
+            </button>
+
+            <button class="tool" id="BtnRubber">
+                <img src="./link/Rubber_off.png">
+            </button>
+
+            <button class="tool" id="BtnPaintBucket">
+                <img src="./link/Paint bucket_off.png">
+            </button>
+
+            <button class="tool" id="BtnColorPicker">
+                <img src="./link/Colour picker_off.png">
+            </button>
+
+            <button class="tool" id="BtnZoom">
+                <img src="./link/Zoom tool_off.png">
+            </button>
+  
+            <button class="tool" id="BtnPencil">
+                <img src="./link/Pencil _off.png">
+            </button>
+
+            <button class="tool" id="BtnBrush">
+                <img src="./link/Brush_off.png">
+            </button>
+
+            <button class="tool" id="BtnSpray">
+                <img src="./link/Spray_off.png">
+            </button>
+
+            <button class="tool" id="BtnText">
+                <img src="./link/Text tool_off.png">
+            </button>
+
+            <button class="tool" id="BtnLine">
+                <img src="./link/Line tool_off.png">
+            </button>
+
+            <button class="tool" id="BtnCurve">
+                <img src="./link/Curve tool_off.png">
+            </button>
+
+            <button class="tool" id="BtnRect">
+                <img src="./link/Rectangle tool_off.png">
+            </button>
+
+            <button class="tool" id="BtnPoly">
+                <img src="./link/Polygonal tool_off.png">
+            </button>
+
+            <button class="tool" id="BtnCircle">
+                <img src="./link/Circle tool_off.png">
+            </button>
+
+            <button class="tool" id="BtnRoundRect">
+                <img src="./link/Round rectangle tool_off.png">
+            </button>
+          </div>
+        <!-- Canvas -->
+          <div class="canvasContainer">
+            <canvas class="canvas" id="canvas-real" width="600px" height="350px"></canvas>
+            <canvas class="canvas" id="canvas-draft" width="600px" height="350px"></canvas>
+          </div>
+    </div>
+
+          <div class="color-menu">
+            <input type="color" id="color-panel" name="Red" value="#000000">
+            <input type="color" id="color-panel" name="Orange" value="#F92E02">
+            <input type="color" id="color-panel" name="Yellow" value="#EAF902">
+            <input type="color" id="color-panel" name="Green" value="#81FF04">
+          </div>
+
+      
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $("#drawing-rectangle").click(function () {
+      currentFunction = new DrawingRectangle(contextReal, contextDraft);
+    });
+    $("#drawing-line").click(function () {
+      currentFunction = new DrawingLine(contextReal, contextDraft);
+    });
+  </script>
 </body>
 </html>
