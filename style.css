@@ -20,6 +20,10 @@ background-color: rgb(128, 128, 128);
 font-family: 'Segoe UI', sans-serif;
 }
 
+.dropdown-item{
+    color: black;
+}
+
 .layout{
     display: flex;
     flex-direction: row;
@@ -64,13 +68,28 @@ canvas {
     height: 100px;
     width: auto;
     background-color: rgb(240, 240, 240);
-    border-top: 1px solid black;
+    border-top: 1px solid  rgb(128, 128, 128);
+    display: flex;
+}
+.colors-selection-span{
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 250px;
 }
 
 #color-panel{
-    width: 20px;
+    width: 23px;
     height: 20px;
-    margin-top: 5px;
+    border: 1px;
+    margin: -0.5px;
+}
+
+#current-color{
+    width: 43px;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 12px;
+    border: 1px;
 }
 
 

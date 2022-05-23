@@ -21,7 +21,7 @@
                       File
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Save As</a></li>
                       <li><a class="dropdown-item" href="#">Another action</a></li>
                       <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
@@ -136,12 +136,34 @@
             <canvas class="canvas" id="canvas-draft" width="600px" height="350px"></canvas>
           </div>
     </div>
-
           <div class="color-menu">
-            <input type="color" id="color-panel" name="Red" value="#000000">
-            <input type="color" id="color-panel" name="Orange" value="#F92E02">
-            <input type="color" id="color-panel" name="Yellow" value="#EAF902">
-            <input type="color" id="color-panel" name="Green" value="#81FF04">
+            <span>
+              <input type="color" id="current-color" name="Black" value="#000000">
+            </span>
+          
+            <span class="colors-selection-span">
+              <input type="color" id="color-panel" name="Black" value="#000000">
+              <input type="color" id="color-panel" name="Grey" value="#404040">
+              <input type="color" id="color-panel" name="Maroon" value="#9C1010">
+              <input type="color" id="color-panel" name="Brown" value="#490808">
+              <input type="color" id="color-panel" name="Pine" value="#1D800C">
+              <input type="color" id="color-panel" name="Ocean" value="#0C7980">
+              <input type="color" id="color-panel" name="Azure" value="#1520A6">
+              <input type="color" id="color-panel" name="Violet" value="#710193">
+              <input type="color" id="color-panel" name="Wine" value="#2C041C">
+
+              <input type="color" id="color-panel" name="IndianRed" value="#CD5C5C">
+              <input type="color" id="color-panel" name="Orange" value="#FFA500">
+              <input type="color" id="color-panel" name="Coral" value="#FF7F50">
+              <input type="color" id="color-panel" name="Khaki" value="#F0E68C">
+              <input type="color" id="color-panel" name="Indigo" value="#4B0082">
+              <input type="color" id="color-panel" name="Navy" value="#000080">
+              <input type="color" id="color-panel" name="RosyBrown" value="#BC8F8F">
+              <input type="color" id="color-panel" name="Chocolate" value="#D2691E">
+              <input type="color" id="color-panel" name="LightGray" value="#D3D3D3">
+              
+            </span>
+            
           </div>
 
       
@@ -154,6 +176,7 @@
     $("#drawing-line").click(function () {
       currentFunction = new DrawingLine(contextReal, contextDraft);
     });
+
   </script>
 </body>
 </html>
