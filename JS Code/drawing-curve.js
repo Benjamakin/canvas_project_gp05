@@ -1,4 +1,4 @@
-class drawingLine extends PaintFunction {
+class drawingCurve extends PaintFunction {
     constructor(contextReal, contextDraft) {
         super();
         this.contextReal = contextReal;

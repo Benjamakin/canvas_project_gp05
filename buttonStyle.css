@@ -1,0 +1,96 @@
+.hidden_on_PolySelection {
+    display: none;
+}
+.hidden_off_PolySelection {
+    display: none;
+}
+.hidden_on_SqSelection {
+    display: none;
+}
+.hidden_off_SqSelection {
+    display: none;
+}
+.hidden_on_rubber {
+    display: none;
+}
+.hidden_off_rubber {
+    display: none;
+}
+.hidden_on_PaintBucket {
+    display: none;
+}
+.hidden_off_PaintBucket {
+    display: none;
+}
+.hidden_on_ColorPicker {
+    display: none;
+}
+.hidden_off_ColorPicker {
+    display: none;
+}
+.hidden_on_Zoom {
+    display: none;
+}
+.hidden_off_Zoom {
+    display: none;
+}
+.hidden_on_Pencil{
+    display: none;
+}
+.hidden_off_Pencil {
+    display: none;
+}
+.hidden_on_Brush {
+    display: none;
+}
+.hidden_off_Brush {
+    display: none;
+}
+.hidden_on_Spray {
+    display: none;
+}
+.hidden_off_Spray {
+    display: none;
+}
+.hidden_on_Text {
+    display: none;
+}
+.hidden_off_Text {
+    display: none;
+}
+.hidden_on_Line {
+    display: none;
+}
+.hidden_off_Line {
+    display: none;
+}
+.hidden_on_Curve {
+    display: none;
+}
+.hidden_off_Curve {
+    display: none;
+}
+.hidden_on_Rect {
+    display: none;
+}
+.hidden_off_Rect{
+    display: none;
+}
+.hidden_on_Poly {
+    display: none;
+}
+.hidden_off_Poly{
+    display: none;
+}
+.hidden_on_Circle {
+    display: none;
+}
+.hidden_off_Circle{
+    display: none;
+}
+.hidden_on_RoundRect {
+    display: none;
+}
+.hidden_off_RoundRect{
+    display: none;
+}

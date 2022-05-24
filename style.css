@@ -11,7 +11,6 @@ img{
     width: 25px;
     height: auto;
 }
-
 .navbar{
 height: 25px;
 font-size: 12px;
@@ -55,8 +54,6 @@ font-family: 'Segoe UI', sans-serif;
 }
 
 .canvas{
-    width: 800px;
-    height: max-content;
     border-right: 2px solid  rgb(128, 128, 128);
     border-bottom: 2px solid  rgb(128, 128, 128);
 }
