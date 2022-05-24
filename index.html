@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./buttonStyle.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="shortcut icon" href="./link/favicon.ico">
@@ -67,67 +68,83 @@
           <div class="toolBox">
 
             <button class="tool" id="BtnPolySelection">
-                <img src="./link/Polygonal selection tool_off.png">
+                <img class="hidden_on_PolySelection"  id="styled_PolySelection" src="./link/Polygonal selection tool_on.png">
+                <img class=""  id="styled2_PolySelection" src="./link/Polygonal selection tool_off.png">
             </button>
             
             <button class="tool" id="BtnSqSelection">
-                <img src="./link/Square selection tool_off.png">
+                <img class="hidden_on_SqSelection"  id="styled_SqSelection" src="./link/Square selection tool_on.png">
+                <img class=""  id="styled2_SqSelection" src="./link/Square selection tool_off.png">
             </button>
 
             <button class="tool" id="BtnRubber">
-                <img src="./link/Rubber_off.png">
+                <img class="hidden_on_rubber"  id="styled_rubber" src="./link/Rubber_on.png">
+                <img class=""  id="styled2_rubber" src="./link/Rubber_off.png">
             </button>
 
             <button class="tool" id="BtnPaintBucket">
-                <img src="./link/Paint bucket_off.png">
+                <img class="hidden_on_PaintBucket" id="styled_PaintBucket" src="./link/Paint bucket_on.png">
+                <img class=""  id="styled2_PaintBucket" src="./link/Paint bucket_off.png">
             </button>
 
             <button class="tool" id="BtnColorPicker">
-                <img src="./link/Colour picker_off.png">
+                <img class="hidden_on_ColorPicker" id="styled_ColorPicker" src="./link/Colour picker_on.png">
+                <img class=""  id="styled2_ColorPicker"  src="./link/Colour picker_off.png">
             </button>
 
             <button class="tool" id="BtnZoom">
-                <img src="./link/Zoom tool_off.png">
+                <img class="hidden_on_Zoom" id="styled_Zoom" src="./link/Zoom tool_on.png">
+                <img class=""  id="styled2_Zoom" src="./link/Zoom tool_off.png">
             </button>
   
             <button class="tool" id="BtnPencil">
-                <img src="./link/Pencil _off.png">
+                <img class="hidden_on_Pencil" id="styled_Pencil" src="./link/Pencil_on.png">
+                <img class=""  id="styled2_Pencil" src="./link/Pencil _off.png">
             </button>
 
             <button class="tool" id="BtnBrush">
-                <img src="./link/Brush_off.png">
+                <img class="hidden_on_Brush"  id="styled_Brush" src="./link/Brush_on.png">
+                <img class=""  id="styled2_Brush" src="./link/Brush_off.png">
             </button>
 
             <button class="tool" id="BtnSpray">
-                <img src="./link/Spray_off.png">
+                <img class="hidden_on_Spray"  id="styled_Spray" src="./link/Spray_on.png">
+                <img class=""  id="styled2_Spray" src="./link/Spray_off.png">
             </button>
 
             <button class="tool" id="BtnText">
-                <img src="./link/Text tool_off.png">
+                <img class="hidden_on_Text"  id="styled_Text" src="./link/Text tool_on.png">
+                <img class=""  id="styled2_Text" src="./link/Text tool_off.png">
             </button>
 
             <button class="tool" id="BtnLine">
-                <img src="./link/Line tool_off.png">
+                <img class="hidden_on_Line"  id="styled_Line" src="./link/Line tool_on.png">
+                <img class=""  id="styled2_Line" src="./link/Line tool_off.png">
             </button>
 
             <button class="tool" id="BtnCurve">
-                <img src="./link/Curve tool_off.png">
+                <img class="hidden_on_Curve"  id="styled_Curve" src="./link/Curve tool_on.png">
+                <img class=""  id="styled2_Curve" src="./link/Curve tool_off.png">
             </button>
 
             <button class="tool" id="BtnRect">
-                <img src="./link/Rectangle tool_off.png">
+                <img class="hidden_on_Rect"  id="styled_Rect" src="./link/Rectangle tool_on.png">
+                <img class=""  id="styled2_Rect" src="./link/Rectangle tool_off.png">
             </button>
 
             <button class="tool" id="BtnPoly">
-                <img src="./link/Polygonal tool_off.png">
+                <img class="hidden_on_Poly"  id="styled_Poly" src="./link/Polygonal tool_on.png">
+                <img class=""  id="styled2_Poly" src="./link/Polygonal tool_off.png">
             </button>
 
             <button class="tool" id="BtnCircle">
-                <img src="./link/Circle tool_off.png">
+                <img class="hidden_on_Circle"  id="styled_Circle" src="./link/Circle tool_on.png">
+                <img class=""  id="styled2_Circle" src="./link/Circle tool_off.png">
             </button>
 
             <button class="tool" id="BtnRoundRect">
-                <img src="./link/Round rectangle tool_off.png">
+                <img class="hidden_on_RoundRect"  id="styled_RoundRect" src="./link/Round rectangle tool_on.png">
+                <img class=""  id="styled2_RoundRect" src="./link/Round rectangle tool_off.png">
             </button>
           </div>
         <!-- Canvas -->
@@ -170,9 +187,22 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="./JS Code/canvas-common.js"></script>
-<script src="./JS Code/drawing-line.js"></script>
-<script src="./JS Code/drawing-rectangle.js"></script>
+<script src="./JS Code/polySelection.js"></script>
+<script src="./JS Code/SqSelection.js"></script>
 <script src="./JS Code/Rubber.js"></script>
+<script src="./JS Code/PaintBucket.js"></script>
+<script src="./JS Code/ColorPicker.js"></script>
+<script src="./JS Code/Zoom.js"></script>
+<script src="./JS Code/drawing-pencil.js"></script>
+<script src="./JS Code/drawing-brush.js"></script>
+<script src="./JS Code/drawing-spray.js"></script>
+<script src="./JS Code/Text.js"></script>
+<script src="./JS Code/drawing-line.js"></script>
+<script src="./JS Code/drawing-curve.js"></script>
+<script src="./JS Code/drawing-rectangle.js"></script>
+<script src="./JS Code/drawing-poly.js"></script>
+<script src="./JS Code/drawing-circle.js"></script>
+<script src="./JS Code/drawing-roundrect.js"></script>
 <script src="./JS Code/pressbotton.js"></script>
 </body>
 </html>
