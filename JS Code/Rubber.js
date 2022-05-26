@@ -16,6 +16,6 @@ class Rubber extends PaintFunction {
     onMouseLeave(){}
     onMouseEnter(){}
     draw(x,y){
-        this.contextReal.clearRect(x,y,100,100);
+        this.contextReal.clearRect(x-20,y-20,100,100);
     }
 }

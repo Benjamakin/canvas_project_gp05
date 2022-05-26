@@ -3,4 +3,13 @@ class PaintBucket extends PaintFunction {
         super();
         this.contextReal = contextReal;
     }
+    onMouseDown(coord,event) {
+        this.contextReal.fillArea(10, 'blue');
+        
+    }
+  onDragging() {}
+  onMouseMove() {}
+  onMouseUp() {}
+  onMouseLeave() {}
+  onMouseEnter() {}
 }

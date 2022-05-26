@@ -52,7 +52,7 @@ $("#BtnRubber").click(function () {
 });
 $("#BtnPaintBucket").click(function () {
   if (counter === 0) {
-    currentFunction = new PaintBucket(contextReal, contextDraft);
+    currentFunction2 = new PaintBucket(contextReal, contextDraft);
     let hiddenimage_on = document.getElementsByClassName("hidden_on_PaintBucket");
     hiddenimage_on[0].classList.remove("hidden_on_PaintBucket");
     let hiddenimageBack_off = document.getElementById("styled2_PaintBucket");
@@ -64,7 +64,7 @@ $("#BtnPaintBucket").click(function () {
     let hiddenimage_off = document.getElementsByClassName("hidden_off_PaintBucket");
     hiddenimage_off[0].classList.remove("hidden_off_PaintBucket");
     counter = 0;
-    return currentFunction = "";
+    return currentFunction2 = "";
   };
 });
 $("#BtnColorPicker").click(function () {

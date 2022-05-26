@@ -77,8 +77,8 @@ canvas {
 #color-panel{
     width: 23px;
     height: 20px;
-    border: 1px;
-    margin: -0.5px;
+    border: 1px solid black;
+    margin: 2px;
 }
 
 #current-color{
@@ -88,7 +88,64 @@ canvas {
     margin-top: 12px;
     border: 1px;
 }
-
+.colorbar{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+}
+.Black{
+    background-color: black;
+}
+.Grey{
+    background-color: #404040;
+}
+.Maroon{
+    background-color: #9C1010;
+}
+.Brown{
+    background-color: #490808;
+}
+.Pine{
+    background-color: #1D800C;
+}
+.Ocean{
+    background-color: #0C7980;
+}
+.Azure{
+    background-color: #1520A6;
+}
+.Violet{
+    background-color: #710193;
+}
+.Wine{
+    background-color: #2C041C;
+}
+.IndianRed{
+    background-color: #CD5C5C;
+}
+.Orange{
+    background-color: #FFA500;
+}
+.Coral{
+    background-color: #FF7F50;
+}
+.Khaki{
+    background-color: #F0E68C;
+}
+.Indigo{
+    background-color: #4B0082;
+}
+.Navy{
+    background-color: #000080;
+}
+.RosyBrown{
+    background-color: #BC8F8F;
+}
+.Chocolate{
+    background-color: #D2691E;
+}
+.LightGray{
+    background-color: #D3D3D3;
+}
 
 
 

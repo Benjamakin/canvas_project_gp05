@@ -9,7 +9,9 @@ console.log(strokecolor);
 $("#canvas-draft").mousedown(function (e) {
   let mouseX = e.offsetX;
   let mouseY = e.offsetY;
+  
   currentFunction.onMouseDown([mouseX, mouseY], e);
+  
   dragging = true;
 });
 
