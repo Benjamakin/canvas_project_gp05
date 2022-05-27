@@ -14,9 +14,15 @@ class DrawingPencil extends PaintFunction {
     }
     onDragging(coord,event){
         this.draw(coord[0],coord[1]);
+        
     }
     onMouseMove(){}
-    onMouseUp(){}
+    onMouseUp(coord,event){
+        this.contextReal.closePath();
+        this.contextReal.stroke();
+        restoreArray.push(contextReal.getImageData(0, 0, canvasReal.width, canvasReal.height));
+        index += 1;
+    }
     onMouseLeave(){}
     onMouseEnter(){}
     draw(x,y){

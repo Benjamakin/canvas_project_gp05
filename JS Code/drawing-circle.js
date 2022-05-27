@@ -39,6 +39,8 @@ class DrawingCircle extends PaintFunction {
       setColorSet ()
       this.contextReal.fill();
       this.contextReal.stroke();
+      restoreArray.push(contextReal.getImageData(0, 0, canvasReal.width, canvasReal.height));
+        index += 1;
     }
     onMouseLeave() {}
     onMouseEnter() {}

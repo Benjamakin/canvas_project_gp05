@@ -45,6 +45,8 @@ class drawingCurve extends PaintFunction {
         this.contextReal.quadraticCurveTo(coord[0],coord[1],this.origX2,this.origY2);
         this.contextReal.fill();
         this.contextReal.stroke();
+        restoreArray.push(contextReal.getImageData(0, 0, canvasReal.width, canvasReal.height));
+        index += 1;
         this.curvefinish=0;
     }
     }

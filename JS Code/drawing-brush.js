@@ -41,6 +41,8 @@ onMouseUp(coord, event){
     let img = new Image();
     img.src='./link/brush2.png';
     this.contextReal.drawImage(img, coord[0], coord[1]);
+    restoreArray.push(contextReal.getImageData(0, 0, canvasReal.width, canvasReal.height));
+        index += 1;
  }
 onMouseLeave(){ }
 onMouseEnter(){ }
