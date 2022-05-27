@@ -30,6 +30,8 @@ class drawingLine extends PaintFunction {
         this.contextReal.lineTo(coord[0],coord[1]);
         this.contextReal.closePath();
         this.contextReal.stroke();
+        restoreArray.push(contextReal.getImageData(0, 0, canvasReal.width, canvasReal.height));
+        index += 1;
     }
     onMouseLeave() {}
     onMouseEnter() { }

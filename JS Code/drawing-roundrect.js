@@ -43,6 +43,8 @@ class DrawingRoundRect extends PaintFunction {
         this.contextReal.closePath();
         this.contextReal.fill();
         this.contextReal.stroke();
+        restoreArray.push(contextReal.getImageData(0, 0, canvasReal.width, canvasReal.height));
+        index += 1;
     }
     onMouseLeave(){}
     onMouseEnter(){}

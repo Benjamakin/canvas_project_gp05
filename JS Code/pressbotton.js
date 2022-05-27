@@ -271,3 +271,13 @@ $("#BtnRoundRect").click(function () {
     return currentFunction = "";
   };
 });
+
+// Undo
+$("#undo-btn").click(function () {
+  undo();
+});
+
+// Redo
+$("#redo-btn").click(function () {
+  redo();
+})
