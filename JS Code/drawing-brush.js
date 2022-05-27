@@ -24,19 +24,16 @@ onMouseDown(coord, event){
     // this.contextReal.drawImage(img, coord[0],coord[1]);
 }
 
-onDragging(coord, event){
-    this.origX = coord[0];
-    this.origY = coord[1];
+onDragging(coord, event){ 
+    this.contextReal.lineJoin = "round";
+    this.contextReal.lineCap = "round";
+    this.contextReal.lineWidth = 10;
     let img = new Image();
     img.src='./link/brush2.png';
-    this.contextReal.drawImage(img, coord[0], coord[1]);
-    // var dist = Math.sqrt(Math.pow(coord[0] - this.origX, 2) + Math.pow(coord[1] - this.origY, 2));
-    // var angle = Math.atan2(coord[0] - this.origX, coord[1] - this.origY);
-    // for (let i = 0; i < dist; i++) {
-    //     x = coord[0] + (Math.sin(angle) * i) - 25;
-    //     y = coord[1]+ (Math.cos(angle) * i) - 25;
-  
-
+    var dist = Math.sqrt(Math.pow(coord[0] - this.origX, 2) + Math.pow(coord[1] - this.origY, 2));
+    var angle = Math.atan2(this.origX-coord[0], this.origY-coord[1]);
+    this.contextReal.drawImage(img, coord[0], coord[1],coord[1]/10, coord[0]/10);
+    console.log(x);
 }
 onMouseMove(){ 
  }
