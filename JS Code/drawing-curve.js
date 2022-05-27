@@ -3,54 +3,51 @@ class drawingCurve extends PaintFunction {
         super();
         this.contextReal = contextReal;
         this.contextDraft = contextDraft;
+        this.curveCounter = 0;
+        this.curvefinish = 0;
     }
     onMouseDown(coord, event) {
-        this.contextDraft.strokeStyle = strokecolor;
         this.contextDraft.lineJoin = "round";
         this.contextDraft.lineCap = "round";
         this.contextDraft.lineWidth = 1;
-        let CurveCounter = 0;
-        if (CurveCounter === 0){
+        if (this.curvefinish==0){
         this.origX = coord[0];
         this.origY = coord[1];
-        CurveCounter = CurveCounter+1;
-        }else if (CurveCounter === 1){
-        this.origX2 = coord[0];
-        this.origY2 = coord[1];
-        CurveCounter = CurveCounter+1;
-        }else{
-        this.origX3 = coord[0];
-        this.origY3 = coord[1];
-        CurveCounter = 0 ;
-        }
-        console.log(this.origX);
-        console.log(this.origX2);
-        console.log(this.origX3);
-        console.log(CurveCounter);
+    }
     }
     onDragging(coord, event) {
+        if (this.curvefinish==0){
+            this.origX2 = coord[0];
+            this.origY2 = coord[1];
         this.contextDraft.clearRect(0,0,canvasDraft.width, canvasDraft.height);
         this.contextDraft.beginPath();
         this.contextDraft.moveTo(this.origX,this.origY);
         this.contextDraft.lineTo(coord[0],coord[1]);
         this.contextDraft.closePath();
         this.contextDraft.stroke();
+    }else if(this.curvefinish==1){
         this.contextDraft.clearRect(0,0,canvasDraft.width, canvasDraft.height);
+        this.contextDraft.beginPath();
+        this.contextDraft.moveTo(this.origX,this.origY);
+        this.contextDraft.quadraticCurveTo(coord[0],coord[1],this.origX2,this.origY2);
+        this.contextDraft.stroke();
+        
+    };
     }
     onMouseMove() { }
-    onMouseUp(coord,event) { 
+    onMouseUp(coord,event) { if(this.curvefinish==0){
+        this.curvefinish= 1;
+    }else if(this.curvefinish==1){
         this.contextDraft.clearRect(0,0,canvasDraft.width, canvasDraft.height);
+        setColorSet ()
         this.contextReal.beginPath();
         this.contextReal.moveTo(this.origX,this.origY);
-        this.contextReal.lineTo(coord[0],coord[1]);
-        this.contextReal.closePath();
+        this.contextReal.quadraticCurveTo(coord[0],coord[1],this.origX2,this.origY2);
+        this.contextReal.fill();
         this.contextReal.stroke();
+        this.curvefinish=0;
+    }
     }
     onMouseLeave() {}
     onMouseEnter() { }
-    draw(x, y) {
-        this.contextReal.lineTo(x, y);
-        this.contextReal.moveTo(x, y);
-        this.contextReal.stroke();
-    }
 }

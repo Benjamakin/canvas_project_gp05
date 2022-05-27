@@ -3,9 +3,14 @@ let contextReal = canvasReal.getContext("2d");
 let canvasDraft = document.getElementById("canvas-draft");
 let contextDraft = canvasDraft.getContext("2d");
 let currentFunction;
-let strokecolor = document.getElementById("color-panel").value;
 let dragging = false;
-console.log(strokecolor);
+// let select_color = document.getElementById("color-panel-grey").attributes.value.value;
+// console.log(select_color);
+let Stylecolor = {
+  fillColor : 'rgba(255,255,255,1)',
+  strokeColor : 'rgba(0,0,0,1)'
+}
+console.log(typeof Stylecolor);
 $("#canvas-draft").mousedown(function (e) {
   let mouseX = e.offsetX;
   let mouseY = e.offsetY;
@@ -53,3 +58,10 @@ class PaintFunction {
   onMouseLeave() {}
   onMouseEnter() {}
 }
+
+function setColorSet () {
+  console.log(Stylecolor.fillColor);
+   contextReal.fillStyle = contextDraft.fillStyle = Stylecolor.fillColor;
+   contextReal.strokeStyle = contextDraft.strokeStyle = Stylecolor.strokeColor;
+   console.log(Stylecolor.strokeColor);
+};

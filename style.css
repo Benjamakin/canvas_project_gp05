@@ -27,7 +27,7 @@ font-family: 'Segoe UI', sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    height: 700px;
+    height: 680px;
 }
 
 .tool {
@@ -43,7 +43,7 @@ font-family: 'Segoe UI', sans-serif;
 .toolBox{
     background-color: rgb(240, 240, 240);
     border-right: 1px solid  rgb(128, 128, 128);
-    height: 700px;
+    height: 680px;
     width: 65px;
 }
 
@@ -62,41 +62,73 @@ canvas {
 }
 
 .color-menu{
-    height: 100px;
-    width: auto;
-    background-color: rgb(240, 240, 240);
+    /* background-color: rgb(240, 240, 240); */
     border-top: 1px solid  rgb(128, 128, 128);
     display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+    
 }
 .colors-selection-span{
-    margin-left: 30px;
-    margin-top: 10px;
+    margin-left: 10px;
+    /* margin-top: 10px; */
     width: 250px;
 }
 
-#color-panel{
+.color-panel{
     width: 23px;
     height: 20px;
     border: 1px solid black;
     margin: 2px;
 }
-
-#current-color{
-    width: 43px;
-    height: 40px;
+.color-main-box{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 5px 5px 5px 35px;
+    justify-self: center;
+   
+}
+#current-color_fill{
+    position: absolute;
+    width: 25px;
+    height: 25px;
     margin-left: 20px;
-    margin-top: 12px;
+    margin-top: 20px;
     border: 1px;
+    border: 1px solid black;
+}
+.current-color_fill_z{
+    z-index: -1;
+}
+#current-color_stroke{
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 25px;
+    height: 25px;
+    border: 1px;
+    border: 1px solid black;
+}
+.mainColor_fill{
+    background-color: black;
+}
+.mainColor_stroke{
+    background-color: white;
 }
 .colorbar{
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto;
 }
+.all-color{
+}
+
 .Black{
     background-color: black;
 }
-.Grey{
-    background-color: #404040;
+.White{
+    background-color: white;
 }
 .Maroon{
     background-color: #9C1010;
@@ -143,8 +175,8 @@ canvas {
 .Chocolate{
     background-color: #D2691E;
 }
-.LightGray{
-    background-color: #D3D3D3;
+.Nocolor{
+    background-color: rgba(255,255,255,1);
 }
 
 

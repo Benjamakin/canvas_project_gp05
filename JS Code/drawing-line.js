@@ -5,7 +5,6 @@ class drawingLine extends PaintFunction {
         this.contextDraft = contextDraft;
     }
     onMouseDown(coord, event) {
-        this.contextDraft.strokeStyle = strokecolor;
         this.contextDraft.lineJoin = "round";
         this.contextDraft.lineCap = "round";
         this.contextDraft.lineWidth = 1;
@@ -25,6 +24,7 @@ class drawingLine extends PaintFunction {
     onMouseMove() { }
     onMouseUp(coord,event) { 
         this.contextDraft.clearRect(0,0,canvasDraft.width, canvasDraft.height);
+        setColorSet ()
         this.contextReal.beginPath();
         this.contextReal.moveTo(this.origX,this.origY);
         this.contextReal.lineTo(coord[0],coord[1]);
