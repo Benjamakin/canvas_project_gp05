@@ -61,6 +61,11 @@ canvas {
     position: absolute;
 }
 
+#canvasInput {
+    position: absolute;
+    display: none;
+}
+
 .color-menu{
     height: 100px;
     width: auto;
