@@ -5,12 +5,11 @@ class DrawingRoundRect extends PaintFunction {
         this.contextDraft = contextDraft;
     }
     onMouseDown(coord, event) {
-        this.contextReal.storkeStyle = "cornflowerblue";
         this.origX = coord[0];
         this.origY = coord[1];
     }
     onDragging(coord, event) {
-        this.contextDraft.storkeStyle = "cornflowerblue";
+        setColorSet ()
         this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
         this.contextDraft.beginPath();
         this.contextDraft.moveTo(coord[0],coord[1]-((coord[1] - this.origY)/5))
@@ -23,12 +22,13 @@ class DrawingRoundRect extends PaintFunction {
         this.contextDraft.quadraticCurveTo(coord[0],this.origY,coord[0], this.origY+((coord[1] - this.origY)/5));
         this.contextDraft.lineTo(coord[0],coord[1]-((coord[1] - this.origY)/5));
         this.contextDraft.closePath();
+        this.contextDraft.fill();
         this.contextDraft.stroke();
     }
     onMouseMove(){}
     onMouseUp(coord,event){
+        setColorSet ()
         this.contextDraft.clearRect(0,0,canvasDraft.width, canvasDraft.height);
-        this.contextReal.strokeStyle=strokecolor;
         this.contextReal.lineWidth = 1;
         this.contextReal.beginPath();
         this.contextReal.moveTo(coord[0],coord[1]-((coord[1] - this.origY)/5))
@@ -41,9 +41,12 @@ class DrawingRoundRect extends PaintFunction {
         this.contextReal.quadraticCurveTo(coord[0],this.origY,coord[0], this.origY+((coord[1] - this.origY)/5));
         this.contextReal.lineTo(coord[0],coord[1]-((coord[1] - this.origY)/5));
         this.contextReal.closePath();
+        this.contextReal.fill();
         this.contextReal.stroke();
+        restoreArray.push(contextReal.getImageData(0, 0, canvasReal.width, canvasReal.height));
+        index += 1;
     }
     onMouseLeave(){}
     onMouseEnter(){}
 }
-console.log(contexReal);
+

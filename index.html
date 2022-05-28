@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./buttonStyle.css">
     <link rel="stylesheet" href="style.css">
+<!-- undo & redo & download cdn -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"> -->
+<!-- undo & redo & download cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="shortcut icon" href="./link/favicon.ico">
     <title>Paint Remake</title>
@@ -22,19 +31,17 @@
                       File
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">Save As</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" id="Save-As-jpg" href="#" download="canvas.jpg">Save As jpg</a></li>
+                      <li><a class="dropdown-item" id="Save-As-png"  href="#" download="canvas.png">Save As png</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      View
+                      Edit
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" id="undo-btn" href="#">Undo</a></li>
+                      <li><a class="dropdown-item" id="redo-btn" href="#">Redo</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
@@ -52,9 +59,8 @@
                     Colors
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item nav-fillcolor" href="#">fillcolor</a></li>
+                    <li><a class="dropdown-item nav-strokecolor" href="#">strokecolor</a></li>
                     </ul>
                 </li>
             </ul>
@@ -155,60 +161,51 @@
           </div>
     </div>
           <div class="color-menu">
-            <span>
-              <input type="color" id="current-color" name="Black" value="">
-            </span>
-          
+            <div class="color-main-box">
+              <div id="current-color_fill" class="mainColor_fill" ></div>
+              <div id="current-color_stroke" class="mainColor_stroke"  ></div>
+            </div>
+            <div class="all-color">
+              <input type="color" name="all-color" id="all-color-select">
+            </div>  
             <span class="colors-selection-span">
               <div class="colorbar">
-                <div id="color-panel" class="Black" value="#000000"></div>
-              <div id="color-panel" class="Grey" value="#404040"></div>
-              <div id="color-panel" class="Maroon" value="#9C1010"></div>
-              <div id="color-panel" class="Brown" value="#490808"></div>
-              <div id="color-panel" class="Pine" value="#1D800C"></div>
-              <div id="color-panel" class="Ocean" value="#0C7980"></div>
-              <div id="color-panel" class="Azure" value="#1520A6"></div>
-              <div id="color-panel" class="Violet" value="#710193"></div>
-              <div id="color-panel" class="Wine" value="#2C041C"></div>
-              <div id="color-panel" class="IndianRed" value="#CD5C5C"></div>
-              <div id="color-panel" class="Orange" value="#FFA500"></div>
-              <div id="color-panel" class="Coral" value="#FF7F50"></div>
-              <div id="color-panel" class="Khaki" value="#F0E68C"></div>
-              <div id="color-panel" class="Indigo" value="#4B0082"></div>
-              <div id="color-panel" class="Navy" value="#000080"></div>
-              <div id="color-panel" class="RosyBrown" value="#BC8F8F"></div>
-              <div id="color-panel" class="Chocolate" value="#D2691E"></div>
-              <div id="color-panel" class="LightGray" value="#D3D3D3"></div>
-              </div>
-
-<!--               
-              <input type="color" id="color-panel" name="Black" value="#000000">
-              <input type="color" id="color-panel" name="Grey" value="#404040">
-              <input type="color" id="color-panel" name="Maroon" value="#9C1010">
-              <input type="color" id="color-panel" name="Brown" value="#490808">
-              <input type="color" id="color-panel" name="Pine" value="#1D800C">
-              <input type="color" id="color-panel" name="Ocean" value="#0C7980">
-              <input type="color" id="color-panel" name="Azure" value="#1520A6">
-              <input type="color" id="color-panel" name="Violet" value="#710193">
-              <input type="color" id="color-panel" name="Wine" value="#2C041C">
-              <input type="color" id="color-panel" name="IndianRed" value="#CD5C5C">
-              <input type="color" id="color-panel" name="Orange" value="#FFA500">
-              <input type="color" id="color-panel" name="Coral" value="#FF7F50">
-              <input type="color" id="color-panel" name="Khaki" value="#F0E68C">
-              <input type="color" id="color-panel" name="Indigo" value="#4B0082">
-              <input type="color" id="color-panel" name="Navy" value="#000080">
-              <input type="color" id="color-panel" name="RosyBrown" value="#BC8F8F">
-              <input type="color" id="color-panel" name="Chocolate" value="#D2691E">
-              <input type="color" id="color-panel" name="LightGray" value="#D3D3D3"> -->
-              
+              <div id="color-panel-black" class="Black color-panel" value="#000000"></div>
+              <div id="color-panel-white" class="White color-panel" value="white"></div>
+              <div id="color-panel-Maroon" class="Maroon color-panel" value="#9C1010"></div>
+              <div id="color-panel-Brown" class="Brown color-panel" value="#490808"></div>
+              <div id="color-panel-Pine" class="Pine color-panel" value="#1D800C"></div>
+              <div id="color-panel-Ocean" class="Ocean color-panel" value="#0C7980"></div>
+              <div id="color-panel-Azure" class="Azure color-panel" value="#1520A6"></div>
+              <div id="color-panel-Violet" class="Violet color-panel" value="#710193"></div>
+              <div id="color-panel-Wine" class="Wine color-panel" value="#2C041C"></div>
+              <div id="color-panel-IndianRed" class="IndianRed color-panel" value="#CD5C5C"></div>
+              <div id="color-panel-Orange" class="Orange color-panel" value="#FFA500"></div>
+              <div id="color-panel-Coral" class="Coral color-panel" value="#FF7F50"></div>
+              <div id="color-panel-Khaki" class="Khaki color-panel" value="#F0E68C"></div>
+              <div id="color-panel-Indigo" class="Indigo color-panel" value="#4B0082"></div>
+              <div id="color-panel-Navy" class="Navy color-panel" value="#000080"></div>
+              <div id="color-panel-RosyBrown" class="RosyBrown color-panel" value="#BC8F8F"></div>
+              <div id="color-panel-Chocolate" class="Chocolate color-panel"  value="#D2691E"></div>
+              <div id="color-panel-noColor" class="Nocolor color-panel" value="rgba(0,0,0,0)"></div>
+              </div>            
             </span>
             
           </div>
           
 
+          <!-- undo & redo & download cdn -->
+          <script src="https://code.jquery.com/jquery-3.5.1.js"
+          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+          integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+        </script>
+          <!-- undo & redo & download cdn -->
       
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="./JS Code/fillcolor.js"></script>
 <script src="./JS Code/canvas-common.js"></script>
 <script src="./JS Code/polySelection.js"></script>
 <script src="./JS Code/SqSelection.js"></script>
@@ -226,6 +223,7 @@
 <script src="./JS Code/drawing-poly.js"></script>
 <script src="./JS Code/drawing-circle.js"></script>
 <script src="./JS Code/drawing-roundrect.js"></script>
+<script src="./JS Code/undoRedo.js" async defer></script>
 <script src="./JS Code/pressbotton.js"></script>
 </body>
 </html>
