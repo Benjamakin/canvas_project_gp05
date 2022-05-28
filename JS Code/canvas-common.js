@@ -88,6 +88,11 @@ $("#canvas-draft").mouseenter(function (e) {
   currentFunction.onMouseEnter([mouseX, mouseY], e);
 });
 
+$("#canvasInput").keyup(function (e) {
+  currentFunction.onKeyUp(e);
+});
+
+
 class PaintFunction {
   constructor() {}
   onMouseDown() {}
@@ -96,6 +101,9 @@ class PaintFunction {
   onMouseUp() {}
   onMouseLeave() {}
   onMouseEnter() {}
+  onKeyUp() {}
+
+}
 }
 
 function setColorSet () {
