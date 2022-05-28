@@ -64,7 +64,7 @@ $("#color-panel-Brown").click(function () {
   $(".mainColor_stroke").css("background-color",select_color)
 }
 });
-$("#ccolor-panel-Pine").click(function () {
+$("#color-panel-Pine").click(function () {
   if (color_counter === 0) {
   let select_color = document.getElementById("color-panel-Pine").attributes.value.value;
   Stylecolor.strokeColor = select_color;

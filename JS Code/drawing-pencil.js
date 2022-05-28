@@ -5,9 +5,7 @@ class DrawingPencil extends PaintFunction {
     }
     onMouseDown(coord,event){
         setColorSet ()
-        this.contextReal.lineJoin = "round";
-        this.contextReal.lineCap = "round";
-        this.contextReal.lineWidth = 1;
+        setStyleLine ()
         this.contextReal.beginPath();
         this.contextReal.moveTo(coord[0],coord[1]);
         this.draw(coord[0],coord[1]);

@@ -23,3 +23,9 @@ function redo() {
         reIndex = -1;
     }
 }
+
+
+function clear() {
+    contextReal.clearRect(0, 0,canvasReal.width, canvasReal.height);
+}
+

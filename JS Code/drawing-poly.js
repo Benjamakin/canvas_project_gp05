@@ -9,7 +9,7 @@ class DrawingPoly extends PaintFunction {
     }
     onMouseDown(coord){
         if (this.start ==false){
-            this.contextDraft.strokeStyle = strokecolor;
+            setColorSet ()
             this.contextDraft.lineJoin = "round";
             this.contextDraft.lineCap = "round";
             this.contextDraft.lineWidth = 1;
@@ -19,7 +19,7 @@ class DrawingPoly extends PaintFunction {
             this.starty = coord[1];
             this.start =true;
         }else{
-            this.contextDraft.strokeStyle = strokecolor;
+            setColorSet ()
             this.contextDraft.lineJoin = "round";
             this.contextDraft.lineCap = "round";
             this.contextDraft.lineWidth = 1;
@@ -43,7 +43,10 @@ class DrawingPoly extends PaintFunction {
         this.contextReal.moveTo(this.origX,this.origY);
         this.contextReal.lineTo(coord[0],coord[1]);
         this.contextReal.closePath();
+        this.contextReal.fill();
         this.contextReal.stroke();
+        restoreArray.push(contextReal.getImageData(0, 0, canvasReal.width, canvasReal.height));
+        index += 1;
         this.origX = coord[0];
         this.origY = coord[1];
     }

@@ -31,6 +31,7 @@ class DrawingRectangle extends PaintFunction {
             coord[0] - this.origX,
             coord[1] - this.origY
         );
+        setStyleLine ()
         setColorSet()
         this.contextReal.fill();
         this.contextReal.stroke();

@@ -10,6 +10,8 @@ let resetDrawing = false;
 let fillStyle = false;
 let regularFix = false;
 let centerFix = false;
+let imageBox = false;
+let imageChange = false;
 
 let restoreArray = [];
 let reIndex = -1;
@@ -46,8 +48,19 @@ window.addEventListener("resize", function () {
 // undo && redo
 
 let Stylecolor = {
-  fillColor : 'rgba(255,255,255,1)',
+  fillColor : 'rgba(0,0,0,1)',
   strokeColor : 'rgba(0,0,0,1)'
+}
+
+let Styleline = {
+  lineWidth : '5',
+  lineCap : 'round',
+  lineJoin : 'round'
+}
+
+let Font = {
+  fontFamily:'arial',
+  fontStyle:'bold'
 }
 console.log(typeof Stylecolor);
 $("#canvas-draft").mousedown(function (e) {
@@ -83,6 +96,7 @@ $("#canvas-draft").mouseleave(function (e) {
 });
 
 $("#canvas-draft").mouseenter(function (e) {
+  dragging = false;
   let mouseX = e.offsetX;
   let mouseY = e.offsetY;
   currentFunction.onMouseEnter([mouseX, mouseY], e);
@@ -91,8 +105,6 @@ $("#canvas-draft").mouseenter(function (e) {
 $("#canvasInput").keyup(function (e) {
   currentFunction.onKeyUp(e);
 });
-
-
 class PaintFunction {
   constructor() {}
   onMouseDown() {}
@@ -102,8 +114,6 @@ class PaintFunction {
   onMouseLeave() {}
   onMouseEnter() {}
   onKeyUp() {}
-
-}
 }
 
 function setColorSet () {
@@ -111,4 +121,10 @@ function setColorSet () {
    contextReal.fillStyle = contextDraft.fillStyle = Stylecolor.fillColor;
    contextReal.strokeStyle = contextDraft.strokeStyle = Stylecolor.strokeColor;
    console.log(Stylecolor.strokeColor);
+};
+
+function setStyleLine (){
+  contextReal.lineWidth = contextDraft.lineWidth = Styleline.lineWidth;
+  contextReal.lineCap= contextDraft.lineCap = Styleline.lineCap;
+  contextReal.lineJoin= contextDraft.lineJoin = Styleline.lineJoin;
 };

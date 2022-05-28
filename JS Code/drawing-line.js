@@ -5,9 +5,7 @@ class drawingLine extends PaintFunction {
         this.contextDraft = contextDraft;
     }
     onMouseDown(coord, event) {
-        this.contextDraft.lineJoin = "round";
-        this.contextDraft.lineCap = "round";
-        this.contextDraft.lineWidth = 1;
+        setStyleLine ()
         this.origX = coord[0];
         this.origY = coord[1];
 

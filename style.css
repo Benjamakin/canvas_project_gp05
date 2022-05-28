@@ -120,7 +120,7 @@ canvas {
     background-color: black;
 }
 .mainColor_stroke{
-    background-color: white;
+    background-color: black;
 }
 .colorbar{
     display: grid;
@@ -183,9 +183,13 @@ canvas {
 .Nocolor{
     background-color: rgba(255,255,255,1);
 }
-
-
-
+#canvasInput {
+    position: absolute;
+    display: none;
+}
+.controlPoint{
+    margin-left: 20px;
+}
 
 
 

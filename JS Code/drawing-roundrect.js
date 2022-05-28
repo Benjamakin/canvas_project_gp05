@@ -10,6 +10,7 @@ class DrawingRoundRect extends PaintFunction {
     }
     onDragging(coord, event) {
         setColorSet ()
+        setStyleLine ()
         this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
         this.contextDraft.beginPath();
         this.contextDraft.moveTo(coord[0],coord[1]-((coord[1] - this.origY)/5))
@@ -28,8 +29,8 @@ class DrawingRoundRect extends PaintFunction {
     onMouseMove(){}
     onMouseUp(coord,event){
         setColorSet ()
+        setStyleLine ()
         this.contextDraft.clearRect(0,0,canvasDraft.width, canvasDraft.height);
-        this.contextReal.lineWidth = 1;
         this.contextReal.beginPath();
         this.contextReal.moveTo(coord[0],coord[1]-((coord[1] - this.origY)/5))
         this.contextReal.quadraticCurveTo(coord[0],coord[1], coord[0]-((coord[0] - this.origX)/5), coord[1]);

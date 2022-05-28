@@ -1,229 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./buttonStyle.css">
-    <link rel="stylesheet" href="style.css">
-<!-- undo & redo & download cdn -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./buttonStyle.css">
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=M+PLUS+Rounded+1c:wght@100&family=Spline+Sans+Mono:wght@300&family=Tiro+Devanagari+Hindi&display=swap"
+    rel="stylesheet">
+  <!-- undo & redo & download cdn -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"> -->
-<!-- undo & redo & download cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="shortcut icon" href="./link/favicon.ico">
-    <title>Paint Remake</title>
+  <!-- undo & redo & download cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="shortcut icon" href="./link/favicon.ico">
+  <title>Paint Remake</title>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      File
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" id="Save-As-jpg" href="#" download="canvas.jpg">Save As jpg</a></li>
-                      <li><a class="dropdown-item" id="Save-As-png"  href="#" download="canvas.png">Save As png</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Edit
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" id="undo-btn" href="#">Undo</a></li>
-                      <li><a class="dropdown-item" id="redo-btn" href="#">Redo</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Image
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Colors
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item nav-fillcolor" href="#">fillcolor</a></li>
-                    <li><a class="dropdown-item nav-strokecolor" href="#">strokecolor</a></li>
-                    </ul>
-                </li>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              File
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" id="Save-As-jpg" href="#">Save As jpg</a></li>
+              <li><a class="dropdown-item" id="Save-As-png" href="#">Save As png</a></li>
             </ul>
-          </div>
-        </div>
-      </nav>
-     
-
-     <div class="layout">
-        <!-- Tool Box -->
-          <div class="toolBox">
-
-            <button class="tool" id="BtnPolySelection">
-                <img class="hidden_on_PolySelection"  id="styled_PolySelection" src="./link/Polygonal selection tool_on.png">
-                <img class=""  id="styled2_PolySelection" src="./link/Polygonal selection tool_off.png">
-            </button>
-            
-            <button class="tool" id="BtnSqSelection">
-                <img class="hidden_on_SqSelection"  id="styled_SqSelection" src="./link/Square selection tool_on.png">
-                <img class=""  id="styled2_SqSelection" src="./link/Square selection tool_off.png">
-            </button>
-
-            <button class="tool" id="BtnRubber">
-                <img class="hidden_on_rubber"  id="styled_rubber" src="./link/Rubber_on.png">
-                <img class=""  id="styled2_rubber" src="./link/Rubber_off.png">
-            </button>
-
-            <button class="tool" id="BtnPaintBucket">
-                <img class="hidden_on_PaintBucket" id="styled_PaintBucket" src="./link/Paint bucket_on.png">
-                <img class=""  id="styled2_PaintBucket" src="./link/Paint bucket_off.png">
-            </button>
-
-            <button class="tool" id="BtnColorPicker">
-                <img class="hidden_on_ColorPicker" id="styled_ColorPicker" src="./link/Colour picker_on.png">
-                <img class=""  id="styled2_ColorPicker"  src="./link/Colour picker_off.png">
-            </button>
-
-            <button class="tool" id="BtnZoom">
-                <img class="hidden_on_Zoom" id="styled_Zoom" src="./link/Zoom tool_on.png">
-                <img class=""  id="styled2_Zoom" src="./link/Zoom tool_off.png">
-            </button>
-  
-            <button class="tool" id="BtnPencil">
-                <img class="hidden_on_Pencil" id="styled_Pencil" src="./link/Pencil_on.png">
-                <img class=""  id="styled2_Pencil" src="./link/Pencil _off.png">
-            </button>
-
-            <button class="tool" id="BtnBrush">
-                <img class="hidden_on_Brush"  id="styled_Brush" src="./link/Brush_on.png">
-                <img class=""  id="styled2_Brush" src="./link/Brush_off.png">
-            </button>
-
-            <button class="tool" id="BtnSpray">
-                <img class="hidden_on_Spray"  id="styled_Spray" src="./link/Spray_on.png">
-                <img class=""  id="styled2_Spray" src="./link/Spray_off.png">
-            </button>
-
-            <button class="tool" id="BtnText">
-                <img class="hidden_on_Text"  id="styled_Text" src="./link/Text tool_on.png">
-                <img class=""  id="styled2_Text" src="./link/Text tool_off.png">
-            </button>
-
-            <button class="tool" id="BtnLine">
-                <img class="hidden_on_Line"  id="styled_Line" src="./link/Line tool_on.png">
-                <img class=""  id="styled2_Line" src="./link/Line tool_off.png">
-            </button>
-
-            <button class="tool" id="BtnCurve">
-                <img class="hidden_on_Curve"  id="styled_Curve" src="./link/Curve tool_on.png">
-                <img class=""  id="styled2_Curve" src="./link/Curve tool_off.png">
-            </button>
-
-            <button class="tool" id="BtnRect">
-                <img class="hidden_on_Rect"  id="styled_Rect" src="./link/Rectangle tool_on.png">
-                <img class=""  id="styled2_Rect" src="./link/Rectangle tool_off.png">
-            </button>
-
-            <button class="tool" id="BtnPoly">
-                <img class="hidden_on_Poly"  id="styled_Poly" src="./link/Polygonal tool_on.png">
-                <img class=""  id="styled2_Poly" src="./link/Polygonal tool_off.png">
-            </button>
-
-            <button class="tool" id="BtnCircle">
-                <img class="hidden_on_Circle"  id="styled_Circle" src="./link/Circle tool_on.png">
-                <img class=""  id="styled2_Circle" src="./link/Circle tool_off.png">
-            </button>
-
-            <button class="tool" id="BtnRoundRect">
-                <img class="hidden_on_RoundRect"  id="styled_RoundRect" src="./link/Round rectangle tool_on.png">
-                <img class=""  id="styled2_RoundRect" src="./link/Round rectangle tool_off.png">
-            </button>
-          </div>
-        <!-- Canvas -->
-          <div class="canvasContainer">
-            <canvas class="canvas" id="canvas-real" width="600px" height="350px"></canvas>
-            <canvas class="canvas" id="canvas-draft" width="600px" height="350px"></canvas>
-            <input id="canvasInput" type="text">
-          </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Edit
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" id="undo-btn" href="#">Undo</a></li>
+              <li><a class="dropdown-item" id="redo-btn" href="#">Redo</a></li>
+              <li><a class="dropdown-item" id="clear-btn" href="#">Clear</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Image
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#"><input type="file" accept=".jpg,.png" id="addImage"></a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Colors
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item nav-fillcolor" href="#">fillcolor</a></li>
+              <li><a class="dropdown-item nav-strokecolor" href="#">strokecolor</a></li>
+            </ul>
+          </li>
+          <li class="fontFamily">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Font Family
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item nav-strokecolor" id="font-Arial" href="#" value="arial">Arial</a></li>
+              <li><a class="dropdown-item nav-strokecolor" id="font-Metrophobic" href="#"
+                  value="metrophobic">Metrophobic</a></li>
+              <li><a class="dropdown-item nav-strokecolor" id="font-Tahoma" href="#" value="tahoma">Tahoma</a></li>
+              <li><a class="dropdown-item nav-strokecolor" id="font-Verdana" href="#" value="verdana">Verdana</a></li>
+              <li><a class="dropdown-item nav-strokecolor" id="font-Calibri" href="#" value="calibri">Calibri</a></li>
+              <!--               -->
+              <li><a class="dropdown-item nav-strokecolor" id="font-metrophobic" href="#" value="metrophobic">Metrophobic</a></li>
+              <li><a class="dropdown-item nav-strokecolor" id="font-anton" href="#" value="anton">Anton</a></li>
+              <li><a class="dropdown-item nav-strokecolor" id="font-Spline-Sans-Mono" href="#" value="Spline-Sans-Mono">Spline Sans Mono</a></li>
+              <li><a class="dropdown-item nav-strokecolor" id="font-Tiro-Devanagari-Hindi" href="#" value="Tiro-Devanagari-Hindi">Tiro Devanagari Hindi</a></li>
+              <li><a class="dropdown-item nav-strokecolor" id="font-Abel" href="#" value="Abel">Abel</a></li>
+              <li><a class="dropdown-item nav-strokecolor" id="font-M-PLUS-Rounded-1c" href="#" value="M-PLUS-Rounded-1c">M PLUS Rounded 1c</a></li>
+              <!--  -->
+            </ul>
+          </li>
+          <li class="fontWeight">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Font Weight
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item nav-strokecolor" id="font-Normal" href="#" value="normal">Normal</a></li>
+              <li><a class="dropdown-item nav-strokecolor" id="font-Bold" href="#" value="bold">Bold</a></li>
+              <li><a class="dropdown-item nav-strokecolor" id="font-Bolder" href="#" value="bolder">Bolder</a></li>
+              <li><a class="dropdown-item nav-strokecolor" id="font-Lighter" href="#" value="lighter">Lighter</a></li>
+              <li><a class="dropdown-item nav-strokecolor" id="font-Italic" href="#" value="italic">Italic</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-          <div class="color-menu">
-            <div class="color-main-box">
-              <div id="current-color_fill" class="mainColor_fill" ></div>
-              <div id="current-color_stroke" class="mainColor_stroke"  ></div>
-            </div>
-            <div class="all-color">
-              <input type="color" name="all-color" id="all-color-select">
-            </div>  
-            <span class="colors-selection-span">
-              <div class="colorbar">
-              <div id="color-panel-black" class="Black color-panel" value="#000000"></div>
-              <div id="color-panel-white" class="White color-panel" value="white"></div>
-              <div id="color-panel-Maroon" class="Maroon color-panel" value="#9C1010"></div>
-              <div id="color-panel-Brown" class="Brown color-panel" value="#490808"></div>
-              <div id="color-panel-Pine" class="Pine color-panel" value="#1D800C"></div>
-              <div id="color-panel-Ocean" class="Ocean color-panel" value="#0C7980"></div>
-              <div id="color-panel-Azure" class="Azure color-panel" value="#1520A6"></div>
-              <div id="color-panel-Violet" class="Violet color-panel" value="#710193"></div>
-              <div id="color-panel-Wine" class="Wine color-panel" value="#2C041C"></div>
-              <div id="color-panel-IndianRed" class="IndianRed color-panel" value="#CD5C5C"></div>
-              <div id="color-panel-Orange" class="Orange color-panel" value="#FFA500"></div>
-              <div id="color-panel-Coral" class="Coral color-panel" value="#FF7F50"></div>
-              <div id="color-panel-Khaki" class="Khaki color-panel" value="#F0E68C"></div>
-              <div id="color-panel-Indigo" class="Indigo color-panel" value="#4B0082"></div>
-              <div id="color-panel-Navy" class="Navy color-panel" value="#000080"></div>
-              <div id="color-panel-RosyBrown" class="RosyBrown color-panel" value="#BC8F8F"></div>
-              <div id="color-panel-Chocolate" class="Chocolate color-panel"  value="#D2691E"></div>
-              <div id="color-panel-noColor" class="Nocolor color-panel" value="rgba(0,0,0,0)"></div>
-              </div>            
-            </span>
-            
-          </div>
-          
+  </nav>
 
-          <!-- undo & redo & download cdn -->
-          <script src="https://code.jquery.com/jquery-3.5.1.js"
-          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-          integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-        </script>
-          <!-- undo & redo & download cdn -->
-      
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="./JS Code/fillcolor.js"></script>
-<script src="./JS Code/canvas-common.js"></script>
-<script src="./JS Code/polySelection.js"></script>
-<script src="./JS Code/SqSelection.js"></script>
-<script src="./JS Code/Rubber.js"></script>
-<script src="./JS Code/PaintBucket.js"></script>
-<script src="./JS Code/ColorPicker.js"></script>
-<script src="./JS Code/Zoom.js"></script>
-<script src="./JS Code/drawing-pencil.js"></script>
-<script src="./JS Code/drawing-brush.js"></script>
-<script src="./JS Code/drawing-spray.js"></script>
-<script src="./JS Code/Text.js"></script>
-<script src="./JS Code/drawing-line.js"></script>
-<script src="./JS Code/drawing-curve.js"></script>
-<script src="./JS Code/drawing-rectangle.js"></script>
-<script src="./JS Code/drawing-poly.js"></script>
-<script src="./JS Code/drawing-circle.js"></script>
-<script src="./JS Code/drawing-roundrect.js"></script>
-<script src="./JS Code/undoRedo.js" async defer></script>
-<script src="./JS Code/pressbotton.js"></script>
+
+  <div class="layout">
+    <!-- Tool Box -->
+    <div class="toolBox">
+
+      <button class="tool" id="BtnPolySelection">
+        <img class="hidden_on_PolySelection" id="styled_PolySelection" src="./link/Polygonal selection tool_on.png">
+        <img class="" id="styled2_PolySelection" src="./link/Polygonal selection tool_off.png">
+      </button>
+
+      <button class="tool" id="BtnSqSelection">
+        <img class="hidden_on_SqSelection" id="styled_SqSelection" src="./link/Square selection tool_on.png">
+        <img class="" id="styled2_SqSelection" src="./link/Square selection tool_off.png">
+      </button>
+
+      <button class="tool" id="BtnRubber">
+        <img class="hidden_on_rubber" id="styled_rubber" src="./link/Rubber_on.png">
+        <img class="" id="styled2_rubber" src="./link/Rubber_off.png">
+      </button>
+
+      <button class="tool" id="BtnPaintBucket">
+        <img class="hidden_on_PaintBucket" id="styled_PaintBucket" src="./link/Paint bucket_on.png">
+        <img class="" id="styled2_PaintBucket" src="./link/Paint bucket_off.png">
+      </button>
+
+      <button class="tool" id="BtnColorPicker">
+        <img class="hidden_on_ColorPicker" id="styled_ColorPicker" src="./link/Colour picker_on.png">
+        <img class="" id="styled2_ColorPicker" src="./link/Colour picker_off.png">
+      </button>
+
+      <button class="tool" id="BtnZoom">
+        <img class="hidden_on_Zoom" id="styled_Zoom" src="./link/Zoom tool_on.png">
+        <img class="" id="styled2_Zoom" src="./link/Zoom tool_off.png">
+      </button>
+
+      <button class="tool" id="BtnPencil">
+        <img class="hidden_on_Pencil" id="styled_Pencil" src="./link/Pencil_on.png">
+        <img class="" id="styled2_Pencil" src="./link/Pencil _off.png">
+      </button>
+
+      <button class="tool" id="BtnBrush">
+        <img class="hidden_on_Brush" id="styled_Brush" src="./link/Brush_on.png">
+        <img class="" id="styled2_Brush" src="./link/Brush_off.png">
+      </button>
+
+      <button class="tool" id="BtnSpray">
+        <img class="hidden_on_Spray" id="styled_Spray" src="./link/Spray_on.png">
+        <img class="" id="styled2_Spray" src="./link/Spray_off.png">
+      </button>
+
+      <button class="tool" id="BtnText">
+        <img class="hidden_on_Text" id="styled_Text" src="./link/Text tool_on.png">
+        <img class="" id="styled2_Text" src="./link/Text tool_off.png">
+      </button>
+
+      <button class="tool" id="BtnLine">
+        <img class="hidden_on_Line" id="styled_Line" src="./link/Line tool_on.png">
+        <img class="" id="styled2_Line" src="./link/Line tool_off.png">
+      </button>
+
+      <button class="tool" id="BtnCurve">
+        <img class="hidden_on_Curve" id="styled_Curve" src="./link/Curve tool_on.png">
+        <img class="" id="styled2_Curve" src="./link/Curve tool_off.png">
+      </button>
+
+      <button class="tool" id="BtnRect">
+        <img class="hidden_on_Rect" id="styled_Rect" src="./link/Rectangle tool_on.png">
+        <img class="" id="styled2_Rect" src="./link/Rectangle tool_off.png">
+      </button>
+
+      <button class="tool" id="BtnPoly">
+        <img class="hidden_on_Poly" id="styled_Poly" src="./link/Polygonal tool_on.png">
+        <img class="" id="styled2_Poly" src="./link/Polygonal tool_off.png">
+      </button>
+
+      <button class="tool" id="BtnCircle">
+        <img class="hidden_on_Circle" id="styled_Circle" src="./link/Circle tool_on.png">
+        <img class="" id="styled2_Circle" src="./link/Circle tool_off.png">
+      </button>
+
+      <button class="tool" id="BtnRoundRect">
+        <img class="hidden_on_RoundRect" id="styled_RoundRect" src="./link/Round rectangle tool_on.png">
+        <img class="" id="styled2_RoundRect" src="./link/Round rectangle tool_off.png">
+      </button>
+    </div>
+    <!-- Canvas -->
+    <div class="canvasContainer">
+      <canvas class="canvas" id="canvas-real" width="600px" height="350px"></canvas>
+      <canvas class="canvas" id="canvas-draft" width="600px" height="350px"></canvas>
+      <input id="canvasInput" type="text">
+    </div>
+  </div>
+  <div class="color-menu">
+    <div class="color-main-box">
+      <div id="current-color_fill" class="mainColor_fill"></div>
+      <div id="current-color_stroke" class="mainColor_stroke"></div>
+    </div>
+    <div class="all-color">
+      <input type="color" name="all-color" id="all-color-select">
+    </div>
+    <span class="colors-selection-span">
+      <div class="colorbar">
+        <div id="color-panel-black" class="Black color-panel" value="#000000"></div>
+        <div id="color-panel-white" class="White color-panel" value="white"></div>
+        <div id="color-panel-Maroon" class="Maroon color-panel" value="#9C1010"></div>
+        <div id="color-panel-Brown" class="Brown color-panel" value="#490808"></div>
+        <div id="color-panel-Pine" class="Pine color-panel" value="#1D800C"></div>
+        <div id="color-panel-Ocean" class="Ocean color-panel" value="#0C7980"></div>
+        <div id="color-panel-Azure" class="Azure color-panel" value="#1520A6"></div>
+        <div id="color-panel-Violet" class="Violet color-panel" value="#710193"></div>
+        <div id="color-panel-Wine" class="Wine color-panel" value="#2C041C"></div>
+        <div id="color-panel-IndianRed" class="IndianRed color-panel" value="#CD5C5C"></div>
+        <div id="color-panel-Orange" class="Orange color-panel" value="#FFA500"></div>
+        <div id="color-panel-Coral" class="Coral color-panel" value="#FF7F50"></div>
+        <div id="color-panel-Khaki" class="Khaki color-panel" value="#F0E68C"></div>
+        <div id="color-panel-Indigo" class="Indigo color-panel" value="#4B0082"></div>
+        <div id="color-panel-Navy" class="Navy color-panel" value="#000080"></div>
+        <div id="color-panel-RosyBrown" class="RosyBrown color-panel" value="#BC8F8F"></div>
+        <div id="color-panel-Chocolate" class="Chocolate color-panel" value="#D2691E"></div>
+        <div id="color-panel-noColor" class="Nocolor color-panel" value="rgba(0,0,0,0)"></div>
+      </div>
+    </span>
+    <div class="controlPoint">
+      <input type="range" id="vol" name="vol" min="1" max="50" value="5">
+    </div>
+  </div>
+
+
+  <!-- undo & redo & download cdn -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+  <!-- undo & redo & download cdn -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="./JS Code/fillcolor.js"></script>
+  <script src="./JS Code/canvas-common.js"></script>
+  <script src="./JS Code/polySelection.js"></script>
+  <script src="./JS Code/SqSelection.js"></script>
+  <script src="./JS Code/Rubber.js"></script>
+  <script src="./JS Code/PaintBucket.js"></script>
+  <script src="./JS Code/ColorPicker.js"></script>
+  <script src="./JS Code/Zoom.js"></script>
+  <script src="./JS Code/drawing-pencil.js"></script>
+  <script src="./JS Code/drawing-brush.js"></script>
+  <script src="./JS Code/drawing-spray.js"></script>
+  <script src="./JS Code/Text.js"></script>
+  <script src="./JS Code/drawing-line.js"></script>
+  <script src="./JS Code/drawing-curve.js"></script>
+  <script src="./JS Code/drawing-rectangle.js"></script>
+  <script src="./JS Code/drawing-poly.js" async defer></script>
+  <script src="./JS Code/drawing-circle.js"></script>
+  <script src="./JS Code/drawing-roundrect.js"></script>
+  <script src="./JS Code/undoRedoClear.js" async defer></script>
+  <script src="./JS Code/DownloadImage.js" async defer></script>
+  <script src="./JS Code//imageimport.js"></script>
+  <script src="./JS Code/pressbotton.js"></script>
 </body>
+
 </html>
