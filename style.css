@@ -61,6 +61,11 @@ canvas {
     position: absolute;
 }
 
+#canvasInput {
+    position: absolute;
+    display: none;
+}
+
 .color-menu{
     /* background-color: rgb(240, 240, 240); */
     border-top: 1px solid  rgb(128, 128, 128);
