@@ -24,12 +24,8 @@ function redo() {
     }
 }
 
-function addImage(){
-    if (imageBox == false || imageChange == true){
-        var imageObj = new Image();
-        let theImage = document.getElementById("addImage").value;
-        imageObj.scr = theImage;
-    }console.log(theImage.value);
-}
 
+function clear() {
+    contextReal.clearRect(0, 0,canvasReal.width, canvasReal.height);
+}
 

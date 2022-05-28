@@ -48,8 +48,19 @@ window.addEventListener("resize", function () {
 // undo && redo
 
 let Stylecolor = {
-  fillColor : 'rgba(255,255,255,1)',
+  fillColor : 'rgba(0,0,0,1)',
   strokeColor : 'rgba(0,0,0,1)'
+}
+
+let Styleline = {
+  lineWidth : '5',
+  lineCap : 'round',
+  lineJoin : 'round'
+}
+
+let Font = {
+  fontFamily:'arial',
+  fontStyle:'bold'
 }
 console.log(typeof Stylecolor);
 $("#canvas-draft").mousedown(function (e) {
@@ -91,6 +102,9 @@ $("#canvas-draft").mouseenter(function (e) {
   currentFunction.onMouseEnter([mouseX, mouseY], e);
 });
 
+$("#canvasInput").keyup(function (e) {
+  currentFunction.onKeyUp(e);
+});
 class PaintFunction {
   constructor() {}
   onMouseDown() {}
@@ -99,6 +113,7 @@ class PaintFunction {
   onMouseUp() {}
   onMouseLeave() {}
   onMouseEnter() {}
+  onKeyUp() {}
 }
 
 function setColorSet () {
@@ -106,4 +121,10 @@ function setColorSet () {
    contextReal.fillStyle = contextDraft.fillStyle = Stylecolor.fillColor;
    contextReal.strokeStyle = contextDraft.strokeStyle = Stylecolor.strokeColor;
    console.log(Stylecolor.strokeColor);
+};
+
+function setStyleLine (){
+  contextReal.lineWidth = contextDraft.lineWidth = Styleline.lineWidth;
+  contextReal.lineCap= contextDraft.lineCap = Styleline.lineCap;
+  contextReal.lineJoin= contextDraft.lineJoin = Styleline.lineJoin;
 };

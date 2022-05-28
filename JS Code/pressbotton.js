@@ -294,3 +294,110 @@ $("#Save-As-png").click(function () {
 $("#Save-As-jpg").click(function () {
   download_image_jpg();
 })
+
+//Clear
+$("#clear-btn").click(function () {
+  clear();
+})
+
+// rang
+$("#vol").click(function () {
+  let select_line = document.getElementById("vol").value;
+  Styleline.lineWidth = select_line;
+})
+
+// font normal
+$("#font-Normal").click(function () {
+  let font_Style1 = document.getElementById("font-Normal").attributes.value.value;
+  Font.fontStyle = font_Style1;
+})
+
+// font Bold
+$("#font-Bold").click(function () {
+  let font_Style1 = document.getElementById("font-Bold").attributes.value.value;
+  Font.fontStyle = font_Style1;
+})
+
+// font Bolder
+$("#font-Bold").click(function () {
+  let font_Style1 = document.getElementById("font-Bold").attributes.value.value;
+  Font.fontStyle = font_Style1;
+})
+
+// font Lighter
+$("#font-Lighter").click(function () {
+  let font_Style1 = document.getElementById("font-Lighter").attributes.value.value;
+  Font.fontStyle = font_Style1;
+})
+
+// font Italic
+$("#font-Italic").click(function () {
+  let font_Style1 = document.getElementById("font-Italic").attributes.value.value;
+  Font.fontStyle = font_Style1;
+})
+
+// font-Arial
+$("#font-Arial").click(function () {
+  let font_Style1 = document.getElementById("font-Arial").attributes.value.value;
+  Font.fontFamily = font_Style1;
+})
+
+// font-Metrophobic
+$("#font-Metrophobic").click(function () {
+  let font_Style1 = document.getElementById("font-Metrophobic").attributes.value.value;
+  Font.fontFamily = font_Style1;
+})
+
+// font-Tahoma
+$("#font-Tahoma").click(function () {
+  let font_Style1 = document.getElementById("font-Tahoma").attributes.value.value;
+  Font.fontFamily = font_Style1;
+})
+
+// font-Verdana
+$("#font-Verdana").click(function () {
+  let font_Style1 = document.getElementById("font-Verdana").attributes.value.value;
+  Font.fontFamily = font_Style1;
+})
+
+// font-Calibri
+$("#font-Calibri").click(function () {
+  let font_Style1 = document.getElementById("font-Calibri").attributes.value.value;
+  Font.fontFamily = font_Style1;
+})
+
+// font-metrophobic
+$("#font-metrophobic").click(function () {
+  let font_Style1 = document.getElementById("font-metrophobic").attributes.value.value;
+  Font.fontFamily = font_Style1;
+})
+
+// font-anton
+$("#font-anton").click(function () {
+  let font_Style1 = document.getElementById("font-anton").attributes.value.value;
+  Font.fontFamily = font_Style1;
+})
+
+// font-Spline-Sans-Mono
+$("#font-Spline-Sans-Mono").click(function () {
+  let font_Style1 = document.getElementById("font-Spline-Sans-Mono").attributes.value.value;
+  Font.fontFamily = font_Style1;
+})
+
+// font-Tiro-Devanagari-Hindi
+$("#font-Tiro-Devanagari-Hindi").click(function () {
+  let font_Style1 = document.getElementById("font-Tiro-Devanagari-Hindi").attributes.value.value;
+  Font.fontFamily = font_Style1;
+})
+
+// font-Abel
+$("#font-Abel").click(function () {
+  let font_Style1 = document.getElementById("font-Abel").attributes.value.value;
+  Font.fontFamily = font_Style1;
+})
+
+// font-M-PLUS-Rounded-1c
+$("#font-M-PLUS-Rounded-1c").click(function () {
+  let font_Style1 = document.getElementById("font-M-PLUS-Rounded-1c").attributes.value.value;
+  Font.fontFamily = font_Style1;
+})

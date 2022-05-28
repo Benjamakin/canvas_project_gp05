@@ -37,6 +37,7 @@ class DrawingCircle extends PaintFunction {
       this.contextReal.beginPath();
       this.contextReal.arc(this.origX, this.origY, radius, 0, Math.PI * 2);
       setColorSet ()
+      setStyleLine ()
       this.contextReal.fill();
       this.contextReal.stroke();
       restoreArray.push(contextReal.getImageData(0, 0, canvasReal.width, canvasReal.height));

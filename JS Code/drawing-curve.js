@@ -40,6 +40,7 @@ class drawingCurve extends PaintFunction {
     }else if(this.curvefinish==1){
         this.contextDraft.clearRect(0,0,canvasDraft.width, canvasDraft.height);
         setColorSet ()
+        setStyleLine ()
         this.contextReal.beginPath();
         this.contextReal.moveTo(this.origX,this.origY);
         this.contextReal.quadraticCurveTo(coord[0],coord[1],this.origX2,this.origY2);
