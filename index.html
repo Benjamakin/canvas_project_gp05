@@ -31,8 +31,8 @@
                       File
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" id="Save-As-jpg" href="#" download="canvas.jpg">Save As jpg</a></li>
-                      <li><a class="dropdown-item" id="Save-As-png"  href="#" download="canvas.png">Save As png</a></li>
+                      <li><a class="dropdown-item" id="Save-As-jpg" href="#" >Save As jpg</a></li>
+                      <li><a class="dropdown-item" id="Save-As-png"  href="#">Save As png</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
@@ -49,9 +49,7 @@
                       Image
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#"><input type="file" accept=".jpg,.png" id="addImage">Add Image</a></li>
                     </ul>
                   </li>
                 <li class="nav-item dropdown">
@@ -219,10 +217,11 @@
 <script src="./JS Code/drawing-line.js"></script>
 <script src="./JS Code/drawing-curve.js"></script>
 <script src="./JS Code/drawing-rectangle.js"></script>
-<script src="./JS Code/drawing-poly.js"></script>
+<script src="./JS Code/drawing-poly.js" async defer></script>
 <script src="./JS Code/drawing-circle.js"></script>
 <script src="./JS Code/drawing-roundrect.js"></script>
 <script src="./JS Code/undoRedo.js" async defer></script>
+<script src="./JS Code/DownloadImage.js" async defer></script>
 <script src="./JS Code/pressbotton.js"></script>
 </body>
 </html>

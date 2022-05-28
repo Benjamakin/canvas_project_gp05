@@ -281,3 +281,16 @@ $("#undo-btn").click(function () {
 $("#redo-btn").click(function () {
   redo();
 })
+
+//Add Image
+$("#addImage").click(function () {
+  addImage();
+})
+
+//Download
+$("#Save-As-png").click(function () {
+  download_image();
+})
+$("#Save-As-jpg").click(function () {
+  download_image_jpg();
+})

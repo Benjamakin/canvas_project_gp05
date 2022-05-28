@@ -10,6 +10,8 @@ let resetDrawing = false;
 let fillStyle = false;
 let regularFix = false;
 let centerFix = false;
+let imageBox = false;
+let imageChange = false;
 
 let restoreArray = [];
 let reIndex = -1;
@@ -83,6 +85,7 @@ $("#canvas-draft").mouseleave(function (e) {
 });
 
 $("#canvas-draft").mouseenter(function (e) {
+  dragging = false;
   let mouseX = e.offsetX;
   let mouseY = e.offsetY;
   currentFunction.onMouseEnter([mouseX, mouseY], e);

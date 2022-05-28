@@ -23,3 +23,13 @@ function redo() {
         reIndex = -1;
     }
 }
+
+function addImage(){
+    if (imageBox == false || imageChange == true){
+        var imageObj = new Image();
+        let theImage = document.getElementById("addImage").value;
+        imageObj.scr = theImage;
+    }console.log(theImage.value);
+}
+
+
